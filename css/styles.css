@@ -4,7 +4,28 @@ body {
 	color: white;
 	background-color: black;
 	font-size: 16px;
-	background: url(../img/flame.gif) no-repeat center center fixed;
+}
+
+/* gif in background */
+.title-container:before {
+  background-image: url('../img/flame.gif');
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20%;
+  height: 20%;
+  z-index: -1;
+  opacity: .9;
+  background-position: center center;
+  background-repeat: no-repeat;
+/*  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;*/
 }
 
 h1 {
