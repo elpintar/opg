@@ -1,26 +1,34 @@
 body {
-	font-family: "Roboto", sans-serif;
+	font-family: "lato", sans-serif;
 	font-weight: 300;
 	color: white;
 	background-color: black;
 	font-size: 16px;
   line-height: 1.5em;
-  text-shadow: 0px 0px 4px black;
+/*  text-shadow: 0px 0px 4px black;
   text-shadow:
      -1px -1px 1px #000,  
       1px -1px 1px #000,
       -1px 1px 1px #000,
-       1px 1px 1px #000;
+       1px 1px 1px #000;*/
 }
 
 div {
   display: inline-block;
 }
 
-img {
-  width: 400px;
-  height: 300px;
-  mask: url(#mask);
+.top-img-container {
+  width: 100%;
+  position: relative;
+  background-image: url("../img/meeting_overview.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+img.opg-title-logo {
+  max-width: 50%;
+  max-height: 50vh;
+  margin: 1em;
 }
 
 h1 {
@@ -29,17 +37,44 @@ h1 {
 	font-variant: small-caps;
 }
 
-.title-container {
-  margin-top: 20vh;
-  margin-bottom: 7vh;
-}
-
 h2 {
   font-size: 2em;
   line-height: 1.2em;
+  letter-spacing: 0.02em;
   font-variant: small-caps;
   margin-bottom: 0.5em;
   text-align: center;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  letter-spacing: 0.02em;
+  font-variant: small-caps;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 0.5em;
+}
+
+a, a:visited {
+  color: white;
+}
+
+ul {
+  list-style-type: circle;
+  margin-left: 2em;
+}
+
+ul li {
+  margin-bottom: 0.5em;
+}
+
+ol {
+  list-style-type: decimal;
+  margin-left: 2em;
 }
 
 .background-div {
@@ -57,10 +92,6 @@ h2 {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-top: 1em;
-  margin-bottom: 3em;
 }
 
 .col-container {
@@ -68,6 +99,62 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.row-container-for-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+
+.row-container-for-scripture {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+
+.full-width {
+  width: 100%;
+  margin: 0;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.left-align-cols {
+  align-items: flex-start;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 1em;
 }
 
 .small-caps {
@@ -78,25 +165,194 @@ h2 {
   font-size: 0.8em;
 }
 
-/* gif in background */
-.background-fire {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-  opacity: .77;
-  /*background-image: url('../img/torch-cave.gif');
-  clip-path: circle(145px at center);
-  content: ' ';
-  display: block;
-  background-position: center center;
-  background-repeat: no-repeat;*/
+.scripture {
+  font-size: 1.25em;
+  line-height: 1.5em;
 }
 
-.background-fire > .row-container {
-  margin: 0;
+.citation {
+  font-size: 0.8em;
+}
+
+.button-container {
+  width: 95%;
+  margin: 0em;
+  margin-bottom: 1em;
+}
+
+.button {
+  color: white;
+  background-color: none;
+  border: white 1px solid;
+  border-radius: 3px;
+  text-decoration: none;
+  
+  font-size: 1em;
+  /*width: 7em;*/
+  margin: 1em;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: rgba(177,177,177,0.5);
+}
+
+/* SPECIFIC SECTIONS */
+
+.spotlight-img {
+  width: 90%;
+}
+
+.upcoming-promo-section {
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+
+.upcoming-promo-section > .col-container {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.upcoming-promo-img {
+  width: 45%;
+  margin-right: 5%;
+  max-width: 80vh;
+}
+
+.get-connected-section {
+  background-image: url("../img/small_group_alicia.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  text-shadow: 0px 0px 4px black;
+  margin-top: 5em;
+}
+
+.get-connected-section > .col-container {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.find-an-event-header {
+  background-image: url("../img/small_group_gallaghers.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 43vh;
+  text-shadow: 0px 0px 4px black;
+}
+
+.synod-hall-map {
+  margin-right: 5%;
+  min-width: 500px;
+}
+
+.what-to-expect-images {
+  width: 80%;
+}
+
+.what-to-expect-images > img {
   width: 100%;
-  height: 100vh;
+  margin-bottom: 1em;
+}
+
+.what-to-expect-pic {
+  background-image: url("../img/speaker_2.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 30vh;
+  text-shadow: 0px 0px 4px black;
+}
+
+.other-opps-section {
+  background-image: url("../img/fop.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  text-shadow: 0px 0px 4px black;
+}
+
+.contact-us-header {
+  background-image: url("../img/contact.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 43vh;
+  text-shadow: 0px 0px 4px black;
+}
+
+.contact-us-typeform-container {
+  width: 100%;
+  height: calc(100vh - 58px);
+}
+
+/* TOPBAR */
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+}
+
+.topbar-padding {
+  height: 44px;
+}
+
+.topbar-logo-container {
+  width: 50px;
+  height: 50px;
+}
+
+.topbar-logo-container > img {
+  width: 80%;
+  height: 80%;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+.topbar-button-container a:hover img {
+  opacity: 0.8;
+}
+
+.homepage-link {
+  display: inline-block;
+}
+
+.topbar-buttons {
+  position: absolute;
+  height: 100%;
+}
+
+.topbar-spacing {
+  height: 100%;
+  width: 20px;
+  content: " ";
+}
+
+.topbar-button-container {
+  margin-left: 0.5em;
+  margin-right: 1.0em;
+  position: relative;
+}
+
+.topbar-button-container a {
+  color: white;
+  text-decoration: none;
+}
+
+.topbar-button-container a:hover {
+  color: #ddd;
+}
+
+/* FOR PHONES / SMALLER SCREENS */
+
+@media (max-width: 1000px) {
+  .row-container-for-section, .row-container-for-scripture {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
 }
