@@ -5,12 +5,11 @@ body {
 	background-color: black;
 	font-size: 16px;
   line-height: 1.5em;
-/*  text-shadow: 0px 0px 4px black;
-  text-shadow:
-     -1px -1px 1px #000,  
-      1px -1px 1px #000,
-      -1px 1px 1px #000,
-       1px 1px 1px #000;*/
+  /* To avoid font-size adjustments. */
+  text-size-adjust: 100%; 
+  -ms-text-size-adjust: 100%; 
+  -moz-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%;
 }
 
 div {
@@ -101,25 +100,21 @@ ol {
   align-items: center;
 }
 
-.row-container-for-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
+.section-margins {
   margin-left: 20%;
   margin-right: 20%;
   margin-top: 1em;
   margin-bottom: 3em;
 }
 
-.row-container-for-scripture {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.even-margins {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 
+.scripture-margins {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 1em;
@@ -128,7 +123,6 @@ ol {
 
 .full-width {
   width: 100%;
-  margin: 0;
 }
 
 .full-height {
@@ -166,6 +160,7 @@ ol {
 }
 
 .scripture {
+  text-align: center;
   font-size: 1.25em;
   line-height: 1.5em;
 }
@@ -182,7 +177,6 @@ ol {
 
 .button {
   color: white;
-  background-color: none;
   border: white 1px solid;
   border-radius: 3px;
   text-decoration: none;
@@ -347,12 +341,96 @@ ol {
   color: #ddd;
 }
 
+.show-on-mobile {
+  display: none;
+}
+
+.hide-on-mobile {
+  display: inherit;
+}
+
+/* FOR SMALLER WIDTHS (DESKTOP) */
+
+@media (max-width: 900px) {
+  .section-margins,
+  .scripture-margins,
+  .even-margins {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
 /* FOR PHONES / SMALLER SCREENS */
 
-@media (max-width: 1000px) {
-  .row-container-for-section, .row-container-for-scripture {
-    margin-left: 20px;
-    margin-right: 20px;
+@media
+  only screen and (max-device-width: 1200px)
+    and (-webkit-min-device-pixel-ratio: 2), /* Webkit */
+  only screen and (max-device-width: 1200px)
+    and (min-resolution: 192dpi), /* Everyone else */ {
+  .show-on-mobile {
+    display: inherit;
   }
 
+  .hide-on-mobile {
+    display: none;
+  }
+
+  body {
+    font-size: 24px;
+  }
+
+  .section-margins,
+  .scripture-margins,
+  .even-margins {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .scripture {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  /* SPECIFIC PAGES */
+
+  .get-connected-section > .col-container {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  .contact-us-typeform-container {
+    width: 100%;
+    height: calc(100vh - 120px);
+  }
+
+  .find-an-event-header {
+    min-height: 30vh;
+  }
+
+  .map-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .synod-hall-map {
+    height: 40vh;
+  }
+
+  .what-to-expect-images {
+    width: calc(100% - 80px);
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 2em;
+  }
+
+  .what-to-expect-images > img {
+    margin-bottom: 40px;
+  }
+
+  .other-opps-section {
+    min-height: 50vh;
+  }
 }
