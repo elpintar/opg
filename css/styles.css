@@ -19,7 +19,7 @@ div {
 .top-img-container {
   width: 100%;
   position: relative;
-  background-image: url("../img/meeting_overview.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/meeting_overview.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -84,6 +84,7 @@ ol {
 .center-content {
 	text-align: center;
 	width: 100%;
+  border-bottom: #aaa 0.5px solid;
 }
 
 .row-container {
@@ -215,12 +216,13 @@ ol {
 }
 
 .get-connected-section {
-  background-image: url("../img/small_group_alicia.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/small_group_alicia.jpg");
   background-size: cover;
   background-position: center;
   min-height: 70vh;
   text-shadow: 0px 0px 4px black;
   margin-top: 5em;
+  border-top: #aaa 1px solid;
 }
 
 .get-connected-section > .col-container {
@@ -229,11 +231,12 @@ ol {
 }
 
 .find-an-event-header {
-  background-image: url("../img/small_group_gallaghers.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/small_group_gallaghers.jpg");
   background-size: cover;
   background-position: center;
   min-height: 43vh;
   text-shadow: 0px 0px 4px black;
+  border-bottom: #aaa 1px solid;
 }
 
 .synod-hall-map {
@@ -264,6 +267,7 @@ ol {
   background-position: center;
   min-height: 70vh;
   text-shadow: 0px 0px 4px black;
+  border-top: #aaa 1px solid;
 }
 
 .contact-us-header {
