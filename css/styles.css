@@ -230,6 +230,15 @@ ol {
   margin-right: 20%;
 }
 
+.about-us-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/pittsburgh.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 43vh;
+  text-shadow: 0px 0px 4px black;
+  border-bottom: #aaa 1px solid;
+}
+
 .find-an-event-header {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/small_group_gallaghers.jpg");
   background-size: cover;
