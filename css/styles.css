@@ -85,6 +85,10 @@ ol {
   margin-left: 2em;
 }
 
+b {
+  font-weight: bold;
+}
+
 .background-div {
 	height: 100vh;
 	width: 100%;
