@@ -223,13 +223,12 @@ b {
 }
 
 .upcoming-promo-img {
-  width: 45%;
-  margin-right: 5%;
-  max-width: 80vh;
+  margin: 2em;
+  max-width: 40vh;
 }
 
 .get-connected-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/small_group_alicia.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/at_porch.JPEG");
   background-size: cover;
   background-position: center;
   min-height: 70vh;
@@ -253,7 +252,7 @@ b {
 }
 
 .find-an-event-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/small_group_gallaghers.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/R_and_Fr_A.JPEG");
   background-size: cover;
   background-position: center;
   min-height: 43vh;
